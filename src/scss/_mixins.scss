@@ -1,0 +1,30 @@
+@mixin flex($direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin clearBorder {
+    border: none;
+    outline: none;
+}
+
+@mixin cardImg($width, $height, $x, $y) {
+    width: $width;
+    height: $height;
+    background-position: $x $y;
+}
+
+@mixin round($radius) {
+    width: $radius;
+    height: $radius;
+    border-radius: 50%;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,276 @@
+.main-content {
+    max-width: 770px;
+    flex-grow: 770;
+    min-height: 994px;
+    background: url(../images/main-bg.png) no-repeat;
+    background-size: cover;
+    border-radius: $blockBorderRadius;
+    box-shadow: $blockShadow;
+    &_bg {
+        background: none;
+        box-shadow: none;
+        margin-right: 30px;
+    }
+    &__logo-img {
+        max-width: 100%;
+        height: auto;
+        margin: 40px 100px;
+    }
+    &__header {
+        font-size: $bigdestFontSize;
+        line-height: 74.67px;
+        font-weight: $boldFontWeight;
+        text-transform: $textTransform;
+        color: $headerColor;
+        white-space: pre-line;
+        margin: 85px 0 0 100px;
+    }
+    &__text {
+        color: $textColor;
+        font-size: $textFontSize;
+        font-weight: $middleFontWeight;
+        line-height: 38.67px;
+        margin: 70px 0 40px 100px;
+        &_big {
+            color: $secondTextColor;
+            font-size: 43px;
+            font-weight: $middleFontWeight;
+            line-height: 77.96px;
+            letter-spacing: 1.14px;
+            margin: 0 0 0 100px;
+        }
+    }
+    &__btn {
+        display: block;
+        width: 309px;
+        height: 61px;
+        border-radius: 31px;
+        border: none;
+        background-image: $bgImgGradient;
+        color: $bgColor;
+        font-size: 19px;
+        font-weight: $middleFontWeight;
+        line-height: 34.67px;
+        text-transform: $textTransform;
+        letter-spacing: 1.12px;
+        margin: 0 100px;
+        cursor: pointer;
+        text-align: center;
+        padding-top: 15px;
+        transition: color .7s ease-in-out;
+        &_small {
+            width: 221px;
+            padding-top: 0;
+            margin: 0;
+            display: inline-block;
+        }
+        &_hover {
+            &:hover {
+                background-image: $hoverBgImgGradient;
+                color: $textColor;
+            }
+        }
+    }
+    &__tel-input {
+        width: 309px;
+        height: 61px;
+        border-radius: 31px;
+        padding-left: 30px;
+        color: $textColor;
+        font-size: 21px;
+        font-weight: $middleFontWeight;
+        line-height: 34.67px;
+        letter-spacing: 1.28px;
+        border: 1px solid $inputBorderColor;
+        margin-left: 100px;
+        &_onfocus {
+            &:focus {
+                border: 1px solid $headerColor;
+                box-shadow: $inputShadow;
+                outline: none;
+            }
+        }
+    }  
+    &__top-box {
+        width: 100%;
+        height: 282px;
+        box-shadow: $blockShadow;
+        margin-bottom: 20px;
+        margin-right: 0;
+        border-radius: $blockBorderRadius;
+        background-color: $bgColor;
+    }
+    &__cards-box {
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+        cursor: pointer;
+    }
+    &__card {
+        width: 370px;
+        height: 206px;
+        border-radius: 5px;
+        background: url(../images/bg-card.png) no-repeat;
+        background-size: cover;
+        margin: 25px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: $blockShadow;
+    }
+    &__card-img {
+        margin: 0 30px;
+        background: url(../images/card-icons.png);
+        &_first {
+            @include cardImg(90px, 85px, 0, 0);
+        }
+        &_second {
+            @include cardImg(81px, 71px, 99%, -5px);
+        }
+        &_third {
+            @include cardImg(85px, 85px, 0, -228px);
+        }
+        &_fourth {
+            @include cardImg(85px, 85px, 100%, -233px);
+        }
+        &_fifth {
+            @include cardImg(86px, 59px, 0, 72px);
+        }
+        &_sixth {
+            @include cardImg(86px, 86px, 100%, 87px);
+        }
+    }
+    &__card-text {
+        color: $cardTextColor;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 26.67px;
+        text-transform: $textTransform;
+        letter-spacing: 0.82px;
+        transition: color .7s ease-in-out;
+    }
+    &__card:hover &__card-text {
+        color: $headerColor;
+    }
+}
+
+
+@media only screen and (max-width: 1165px) {
+    .main-content {
+        &__cards-box {
+            @include flex(column, center, center);
+            flex-wrap: nowrap;
+        }
+        &__card {
+            width: 100%;
+        }
+        &__text {
+            &_big {
+                font-size: 40px;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1034px) {
+    .main-content {
+        position: relative;
+        &__header,
+        &__logo-img,
+        &__text,
+        &__btn {
+            margin: 30px 0 30px 70px;
+        }
+        &__btn_small, &__tel-input  {
+            width: 370px;
+            margin-left: 100px;  
+        } 
+        &__top-box  &__logo-img,
+        &__top-box  &__text {
+            margin-left: 50px;
+        }
+        &__header {
+            font-size: 67px;
+            line-height: 68px
+        }
+    }
+}
+
+@media only screen and (max-width: 955px) {
+    .main-content {
+        &__header {
+            font-size: 45px;
+            line-height: 48px
+        }
+        &_btn,
+        &__btn_small, 
+        &__tel-input  {
+            width: 330px;
+            margin-left: 10%;  
+        } 
+        &__text {
+            &_big {
+                font-size: 39px;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-content {
+        &__header {
+            font-size: 62px;
+            line-height: 1.1em;
+        }
+        &__text {
+            padding-right: 10%;
+        }
+        &__header,
+        &__logo-img,
+        &__text,
+        &__btn {
+            margin: 30px 0 30px 10%;
+        }
+        &__btn {
+            width: 80%;
+        }
+        &__btn_small, 
+        &__tel-input  {
+            width: 330px;
+            margin: 10px 15%;  
+        } 
+        &__top-box {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        &__text {
+            &_big {
+                font-size: 35px;
+                line-height: 1.8em;
+            }
+        }
+        &__card {
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .main-content {
+        &__header {
+            font-size: 38px;
+            line-height: 1.2em;
+        }
+        &__text {
+            font-size: 22px;
+            line-height: 1.2em;
+        }
+        &__btn_small, 
+        &__tel-input  {
+            width: 80%;
+            margin: 10px 5%;  
+        } 
+    }
+}
