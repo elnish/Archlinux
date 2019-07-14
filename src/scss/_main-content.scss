@@ -1,7 +1,7 @@
 .main-content {
     max-width: 770px;
     flex-grow: 770;
-    min-height: 994px;
+    height: 994px;
     background: url(../images/main-bg.png) no-repeat;
     background-size: cover;
     border-radius: $blockBorderRadius;
@@ -10,6 +10,7 @@
         background: none;
         box-shadow: none;
         margin-right: 30px;
+        min-height: 994px;
     }
     &__logo-img {
         max-width: 100%;
@@ -220,6 +221,9 @@
 
 @media only screen and (max-width: 768px) {
     .main-content {
+        &_bg {
+            margin-right: 0;
+        }
         &__header {
             font-size: 62px;
             line-height: 1.1em;

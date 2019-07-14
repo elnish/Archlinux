@@ -42,7 +42,7 @@
   -webkit-box-flex: 770;
       -ms-flex-positive: 770;
           flex-grow: 770;
-  min-height: 994px;
+  height: 994px;
   background: url(../images/main-bg.png) no-repeat;
   background-size: cover;
   border-radius: 5px;
@@ -55,6 +55,7 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   margin-right: 30px;
+  min-height: 994px;
 }
 
 .main-content__logo-img {
@@ -317,6 +318,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .main-content_bg {
+    margin-right: 0;
+  }
   .main-content__header {
     font-size: 62px;
     line-height: 1.1em;
