@@ -73,6 +73,7 @@
     letter-spacing: 1.12px;
     margin: 0 100px;
     cursor: pointer;
+    outline: none;
     text-align: center;
     padding-top: 15px;
     transition: color .7s ease-in-out; }
@@ -161,7 +162,8 @@
     text-transform: uppercase;
     letter-spacing: 0.82px;
     transition: color .7s ease-in-out; }
-  .main-content__card:hover .main-content__card-text {
+  .main-content__card:hover .main-content__card-text,
+  .main-content__card_active .main-content__card-text {
     color: #7358fb; }
 
 @media only screen and (max-width: 1165px) {
