@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "gulp-autoprefixer": "^6.1.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "inputmask": "^4.0.8"
   }
 }

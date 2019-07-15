@@ -28,11 +28,19 @@ window.onload = () => {
         event.preventDefault();
         let value = input.value;
         if (re.test(value)) {
-            alert('Спасибо!')
+            alert('Спасибо!');
+            input.value = "";
         } else {
-            alert('Неверный формат номера')
+            alert('Неверный формат номера');
+            input.value = "";
         }
     }
     form.addEventListener('submit', validate);
 } 
 
+var element = document.getElementById('phone');
+var maskOptions = {
+    mask: '+38(000)000-0000',
+    lazy: false
+} 
+var mask = new IMask(element, maskOptions);
