@@ -7,7 +7,6 @@ gulp.task('scss', () => {
         .pipe(scss())
         .pipe(autoprefixer())
         .pipe(gulp.dest('src/css'))
-        .pipe(gulp.dest('app/css'))
 });
 
 gulp.task('watch', () => {
