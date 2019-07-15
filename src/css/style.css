@@ -75,16 +75,14 @@
     cursor: pointer;
     outline: none;
     text-align: center;
-    padding-top: 15px;
-    transition: color .7s ease-in-out; }
+    padding-top: 15px; }
     .main-content__btn_small {
       width: 221px;
       padding-top: 0;
       margin: 0;
       display: inline-block; }
     .main-content__btn_hover:hover {
-      background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-      color: #333333; }
+      background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%); }
   .main-content__tel-input {
     width: 309px;
     height: 61px;
